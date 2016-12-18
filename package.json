@@ -1,5 +1,5 @@
 {
-  "name": "google-polyline",
+  "name": "code42day-google-polyline",
   "version": "1.0.0",
   "description": "Encode / decode Google's polyline format",
   "author": "Jonas Hermsmeier <jhermsmeier@gmail.com> (https://jhermsmeier.de)",
@@ -17,16 +17,9 @@
     "matcha": "~0.7.0",
     "mocha": "~3.1.2"
   },
-  "homepage": "https://github.com/jhermsmeier/node-google-polyline",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jhermsmeier/node-google-polyline.git"
-  },
-  "bugs": {
-    "url": "https://github.com/jhermsmeier/node-google-polyline/issues"
-  },
-  "directories": {
-    "test": "test"
+    "url": "https://github.com/code42day/google-polyline.git"
   },
   "scripts": {
     "benchmark": "matcha --reporter plain",
