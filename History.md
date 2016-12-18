@@ -1,4 +1,13 @@
 
+2.0.0 / 2016-12-18
+==================
+
+ * switch to lat, lon (x,y) order
+ * encode optimization: keep array of chars
+ * encode optimization: stop creating partial Strings
+ * minor adjustment to negative numbers rounding
+ * add longer polyline example to benchmark
+
 1.1.0 / 2016-12-17
 ==================
 
