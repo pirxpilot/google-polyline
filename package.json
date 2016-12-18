@@ -12,11 +12,12 @@
     "decode"
   ],
   "dependencies": {
-    "@pirxpilot/matcha": "~1"
   },
   "devDependencies": {
+    "@pirxpilot/matcha": "~1",
     "jshint": "~2",
-    "mocha": "~3.1.2"
+    "mocha": "~3",
+    "polyline-encoded": "^0.0.8"
   },
   "repository": {
     "type": "git",
