@@ -6,9 +6,9 @@ suite( 'Google Polyline Example', function() {
   test( 'encode', function() {
 
     var points = [
-      [ 38.5, -120.2 ],
-      [ 40.7, -120.95 ],
-      [ 43.252, -126.453 ]
+      [ -120.2, 38.5 ],
+      [ -120.95, 40.7 ],
+      [ -126.453, 43.252 ]
     ]
 
     var encoded = polyline.encode( points )
@@ -21,9 +21,9 @@ suite( 'Google Polyline Example', function() {
 
     var points = polyline.decode( '_p~iF~ps|U_ulLnnqC_mqNvxq`@' )
     var decoded = [
-      [ 38.5, -120.2 ],
-      [ 40.7, -120.95 ],
-      [ 43.252, -126.453 ]
+      [ -120.2, 38.5 ],
+      [ -120.95, 40.7 ],
+      [ -126.453, 43.252 ]
     ]
 
     assert.deepEqual( points, decoded )
