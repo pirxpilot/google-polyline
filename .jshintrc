@@ -1,0 +1,12 @@
+{
+  "asi": true,
+  "undef": true,
+  "unused": true,
+  "laxbreak": true,
+  "browser": true,
+  "node": true,
+  "mocha": true,
+  "globals": {
+    "bench": false
+  }
+}
