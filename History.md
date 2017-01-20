@@ -1,4 +1,10 @@
 
+2.0.2 / 2017-01-20
+==================
+
+ * add 'lib' to the list of linted dirs
+ * handle fractional values smaller than precision
+
 2.0.1 / 2016-12-18
 ==================
 
