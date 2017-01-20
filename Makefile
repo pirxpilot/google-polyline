@@ -6,7 +6,7 @@ all: check compile
 check: lint test
 
 lint: node_modules
-	$(NODE_BIN)/jshint index.js test benchmark
+	$(NODE_BIN)/jshint index.js lib test benchmark
 
 test: node_modules
 	$(NODE_BIN)/mocha --ui tdd test
