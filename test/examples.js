@@ -30,4 +30,11 @@ suite( 'Google Polyline Example', function() {
 
   })
 
+  test( 'almost zero', function () {
+
+    assert.equal(polyline.encode([[1, 1], [1.000001, 0.999999]]), '_ibE_ibE??');
+
+    assert.deepEqual(polyline.decode('_ibE_ibE??'), [[1, 1], [1, 1]]);
+    assert.deepEqual(polyline.decode('_ibE_ibE>>'), [[1, 1], [1, 1]]);
+  })
 })
