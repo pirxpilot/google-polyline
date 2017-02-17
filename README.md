@@ -64,11 +64,11 @@ returns array of point representing decoded polyline
 [org-google-polyline]: https://github.com/jhermsmeier/node-google-polyline
 [GeoJSON]: http://geojson.org/geojson-spec.html#positions
 
-[npm-image]: https://img.shields.io/npm/v/code42day-google-polyline.svg
-[npm-url]: https://npmjs.org/package/code42day-google-polyline
+[npm-image]: https://img.shields.io/npm/v/@pirxpilot/google-polyline.svg
+[npm-url]: https://npmjs.org/package/@pirxpilot/google-polyline
 
-[travis-url]: https://travis-ci.org/code42day/google-polyline
-[travis-image]: https://img.shields.io/travis/code42day/google-polyline.svg
+[travis-url]: https://travis-ci.org/pirxpilot/google-polyline
+[travis-image]: https://img.shields.io/travis/pirxpilot/google-polyline.svg
 
-[gemnasium-image]: https://img.shields.io/gemnasium/code42day/google-polyline.svg
-[gemnasium-url]: https://gemnasium.com/code42day/google-polyline
+[gemnasium-image]: https://img.shields.io/gemnasium/pirxpilot/google-polyline.svg
+[gemnasium-url]: https://gemnasium.com/pirxpilot/google-polyline

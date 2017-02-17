@@ -1,5 +1,5 @@
 {
-  "name": "code42day-google-polyline",
+  "name": "@pirxpilot/google-polyline",
   "version": "2.0.2",
   "description": "Encode / decode Google's polyline format",
   "author": "Jonas Hermsmeier <jhermsmeier@gmail.com> (https://jhermsmeier.de)",
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/code42day/google-polyline.git"
+    "url": "https://github.com/pirxpilot/google-polyline.git"
   },
   "scripts": {
     "test": "make check"
