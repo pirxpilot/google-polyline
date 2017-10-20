@@ -55,7 +55,7 @@ returns string representing encoded polyline
 returns array of point representing decoded polyline
 
 - `string` is an encoded polyline representation
-- `factor` - optional (defaults to `10e5`), factor by which coordinates are divided after decoding; use factor `10e6` when decoding polylines from OSM data ([OSRM], [mapzen] etc.)
+- `factor` - optional (defaults to `1e5`), factor by which coordinates are divided after decoding; use factor `1e6` when decoding polylines from OSM data ([OSRM], [mapzen] etc.)
 
 [OSRM]: http://project-osrm.org/
 [mapzen]: https://mapzen.com/
