@@ -46,6 +46,21 @@ suite( 'Google Polyline Example', function() {
 
   })
 
+  test( 'decode with map function', function() {
+
+    var points = polyline.decode( '_p~iF~ps|U_ulLnnqC_mqNvxq`@', function( point ) {
+      return { lon: point[0], lat: point[1] }
+    })
+    var decoded = [
+      { lon: -120.2, lat: 38.5 },
+      { lon: -120.95, lat: 40.7 },
+      { lon: -126.453, lat: 43.252 }
+    ]
+
+    assert.deepEqual( points, decoded )
+
+  })
+
   test( 'almost zero', function () {
 
     assert.equal(polyline.encode([[1, 1], [1.000001, 0.999999]]), '_ibE_ibE??');
