@@ -1,4 +1,11 @@
 
+2.0.4 / 2017-10-23
+==================
+
+ * upgrade mocha to ~4
+ * travis CI: switch to testing node LTS and stable versions
+ * fix default `factor` value in README.md
+
 2.0.3 / 2017-02-16
 ==================
 
