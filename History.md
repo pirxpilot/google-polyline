@@ -1,4 +1,9 @@
 
+2.1.0 / 2017-10-24
+==================
+
+ * add optional `mapFn` parameter to `encode` and `decode`
+
 2.0.4 / 2017-10-23
 ==================
 
