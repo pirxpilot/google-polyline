@@ -1,4 +1,9 @@
 
+2.1.1 / 2017-12-24
+==================
+
+ * fixed typo blocking code-formatting in README
+
 2.1.0 / 2017-10-24
 ==================
 
