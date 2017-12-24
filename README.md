@@ -49,7 +49,7 @@ polyline.decode( '_p~iF~ps|U_ulLnnqC_mqNvxq`@' )
 returns string representing encoded polyline
 
 - `points` is an array of points, each point is a 2 element array [longitude, latitude]
-- ``mapFunction - can be optionally passed to convert array of elements to [lon. lat] pairs
+- `mapFunction` - can be optionally passed to convert array of elements to [lon. lat] pairs
 mapFunction is called for each item in `points` array and has the same signature as `Array.map` callback
 
 ### `polyline.decode(string[, factor][, mapFunction])`
