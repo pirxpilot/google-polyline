@@ -1,10 +1,10 @@
 {
-  "asi": true,
   "undef": true,
   "unused": true,
   "browser": true,
   "node": true,
   "mocha": true,
+  "esversion": 6,
   "globals": {
     "bench": false
   }
