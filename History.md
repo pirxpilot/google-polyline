@@ -1,4 +1,14 @@
 
+3.0.0 / 2018-07-25
+==================
+
+ * optimize encoding
+ * fix rounding errors
+ * add support for prefix option for encoding
+ * add support for start, end options for decoding
+ * use options object to pass decode/encode options
+ * enable es6 syntax
+
 2.2.0 / 2018-07-24
 ==================
 
