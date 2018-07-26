@@ -44,6 +44,33 @@ suite( 'Google Polyline Example', function() {
 
   });
 
+  test( 'decode with start specified', function() {
+
+    let points = decode( '$$$_p~iF~ps|U_ulLnnqC_mqNvxq`@', { start: 3 } );
+    let decoded = [
+      [ -120.2, 38.5 ],
+      [ -120.95, 40.7 ],
+      [ -126.453, 43.252 ]
+    ];
+
+    assert.deepEqual( points, decoded );
+
+  });
+
+  test( 'decode with end specified', function() {
+
+    let poly = '_p~iF~ps|U_ulLnnqC_mqNvxq`@$$$';
+    let points = decode( poly, { end: poly.length - 3 } );
+    let decoded = [
+      [ -120.2, 38.5 ],
+      [ -120.95, 40.7 ],
+      [ -126.453, 43.252 ]
+    ];
+
+    assert.deepEqual( points, decoded );
+
+  });
+
   test( 'decode with map function', function() {
 
     let points = decode( '_p~iF~ps|U_ulLnnqC_mqNvxq`@', { mapFn: ([ lon, lat ]) => ({ lon, lat }) });
