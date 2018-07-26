@@ -17,6 +17,20 @@ suite( 'Google Polyline Example', function() {
 
   });
 
+  test( 'encode', function() {
+
+    let points = [
+      [ -120.2, 38.5 ],
+      [ -120.95, 40.7 ],
+      [ -126.453, 43.252 ]
+    ];
+
+    let encoded = encode( points, { prefix: '$$$' } );
+
+    assert.equal( encoded, '$$$_p~iF~ps|U_ulLnnqC_mqNvxq`@' );
+
+  });
+
   test( 'encode with map function', function() {
 
     let points = [
