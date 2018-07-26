@@ -25,9 +25,7 @@ suite( 'Google Polyline Example', function() {
       { lon: -126.453, lat: 43.252 }
     ];
 
-    let encoded = encode( points, function( point ) {
-      return [ point.lon, point.lat ];
-    });
+    let encoded = encode( points, { mapFn: ({ lon, lat }) => [ lon, lat ] });
 
     assert.equal( encoded, '_p~iF~ps|U_ulLnnqC_mqNvxq`@' );
 
@@ -48,9 +46,7 @@ suite( 'Google Polyline Example', function() {
 
   test( 'decode with map function', function() {
 
-    let points = decode( '_p~iF~ps|U_ulLnnqC_mqNvxq`@', function( point ) {
-      return { lon: point[0], lat: point[1] };
-    });
+    let points = decode( '_p~iF~ps|U_ulLnnqC_mqNvxq`@', { mapFn: ([ lon, lat ]) => ({ lon, lat }) });
     let decoded = [
       { lon: -120.2, lat: 38.5 },
       { lon: -120.95, lat: 40.7 },
