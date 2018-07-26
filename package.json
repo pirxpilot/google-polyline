@@ -1,6 +1,6 @@
 {
-  "name": "google-polyline",
-  "version": "1.0.0",
+  "name": "@pirxpilot/google-polyline",
+  "version": "2.2.0",
   "description": "Encode / decode Google's polyline format",
   "author": "Jonas Hermsmeier <jhermsmeier@gmail.com> (https://jhermsmeier.de)",
   "license": "MIT",
@@ -11,25 +11,22 @@
     "encode",
     "decode"
   ],
-  "main": "lib/polyline.js",
   "dependencies": {},
   "devDependencies": {
-    "matcha": "~0.7.0",
-    "mocha": "~3.1.2"
+    "@pirxpilot/matcha": "~1",
+    "jshint": "~2",
+    "mocha": "~4",
+    "polyline-encoded": "^0.0.8"
   },
-  "homepage": "https://github.com/jhermsmeier/node-google-polyline",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jhermsmeier/node-google-polyline.git"
-  },
-  "bugs": {
-    "url": "https://github.com/jhermsmeier/node-google-polyline/issues"
-  },
-  "directories": {
-    "test": "test"
+    "url": "https://github.com/pirxpilot/google-polyline.git"
   },
   "scripts": {
-    "benchmark": "matcha --reporter plain",
-    "test": "mocha --ui tdd"
-  }
+    "test": "make check"
+  },
+  "files": [
+    "index.js",
+    "lib"
+  ]
 }
