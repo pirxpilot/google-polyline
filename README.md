@@ -14,13 +14,25 @@ corresponds to position definition in [GeoJSON] spec.
 ## Install via [npm](https://npmjs.com)
 
 ```sh
-$ npm install --save google-polyline
+$ npm install --save @pirxpilot/google-polyline
+```
+## Install via [yarn](https://yarnpkg.com)
+```sh
+$ yarn add @pirxpilot/google-polyline
 ```
 
 ## Usage
 
+ES5:
 ```js
-var polyline = require( 'google-polyline' )
+var polyline = require('@pirxpilot/google-polyline')
+```
+or
+
+ES6+:
+
+```js
+import * as polyline from "@pirxpilot/google-polyline";
 ```
 
 ```js
@@ -44,6 +56,10 @@ polyline.decode( '_p~iF~ps|U_ulLnnqC_mqNvxq`@' )
 ```
 
 ## API
+
+### Typescript support
+
+This library was updated in 16/08/2019 to support typescript definitions, if you find any bug on it please report them to [n0minal](https://github.com/n0minal).
 
 ### `polyline.encode(points[, options])`
 
