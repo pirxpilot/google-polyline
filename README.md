@@ -11,30 +11,30 @@ of coordinates: **longitude**, **latitude** (think **x**, **y** or **easting**, 
 corresponds to position definition in [GeoJSON] spec.
 
 
-## Install via [npm](https://npmjs.com)
+## Install
 
 ```sh
-$ npm install --save google-polyline
+$ npm install --save @pirxpilot/google-polyline
+
+# or
+
+$ yarn add @pirxpilot/google-polyline
 ```
 
 ## Usage
 
 ```js
-var polyline = require( 'google-polyline' )
-```
+const { encode, decode } = require('@pirxpilot/google-polyline')
 
-```js
-polyline.encode([
+encode([
   [ -120.2, 38.5 ],
   [ -120.95, 40.7 ],
   [ -126.453, 43.252 ]
 ])
 
 > '_p~iF~ps|U_ulLnnqC_mqNvxq`@'
-```
 
-```js
-polyline.decode( '_p~iF~ps|U_ulLnnqC_mqNvxq`@' )
+decode( '_p~iF~ps|U_ulLnnqC_mqNvxq`@' )
 
 > [
   [ -120.2, 38.5 ],
