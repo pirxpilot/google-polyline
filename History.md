@@ -1,4 +1,10 @@
 
+3.0.1 / 2019-08-16
+==================
+
+ * update package name in README.md file
+ * update documentation
+
 3.0.0 / 2018-07-25
 ==================
 
