@@ -1,7 +1,5 @@
 [![NPM version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
-[![Dependency Status][deps-image]][deps-url]
-[![Development Dependency Status][dev-deps-image]][dev-deps-url]
+[![Build Status][build-image]][build-url]
 
 # google-polyline
 
@@ -71,14 +69,9 @@ returns an array of points representing decoded polyline
 [org-google-polyline]: https://github.com/jhermsmeier/node-google-polyline
 [GeoJSON]: http://geojson.org/geojson-spec.html#positions
 
-[npm-image]: https://img.shields.io/npm/v/@pirxpilot/google-polyline.svg
+[npm-image]: https://img.shields.io/npm/v/@pirxpilot/google-polyline
 [npm-url]: https://npmjs.org/package/@pirxpilot/google-polyline
 
-[travis-url]: https://travis-ci.org/pirxpilot/google-polyline
-[travis-image]: https://img.shields.io/travis/pirxpilot/google-polyline.svg
+[build-url]: https://github.com/pirxpilot/google-polyline/actions/workflows/check.yaml
+[build-image]: https://img.shields.io/github/actions/workflow/status/pirxpilot/google-polyline/check.yaml?branch=pu
 
-[deps-image]: https://img.shields.io/david/pirxpilot/google-polyline.svg
-[deps-url]: https://david-dm.org/pirxpilot/google-polyline
-
-[dev-deps-image]: https://img.shields.io/david/dev/pirxpilot/google-polyline.svg
-[dev-deps-url]: https://david-dm.org/pirxpilot/google-polyline?type=dev
