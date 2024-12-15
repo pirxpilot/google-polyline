@@ -10,6 +10,8 @@ function readPolyline(filename) {
 
 var huge = readPolyline('usa.txt');
 
+/* global suite, bench */
+
 suite( 'decode', function() {
 
   bench( '3 points', function() {

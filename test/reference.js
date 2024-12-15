@@ -1,3 +1,4 @@
+const { describe, it } = require( 'node:test' );
 const fs = require('fs');
 const leaflet = require('polyline-encoded');
 const assert = require( 'assert' );
@@ -15,9 +16,9 @@ function reverse(c) {
 
 const huge = readPolyline('usa.txt');
 
-suite( 'compare to Leaflet implementation', function() {
+describe( 'compare to Leaflet implementation', function() {
 
-  test( 'decode', function() {
+  it( 'decode', function() {
 
     let points = polyline.decode( huge );
     let pointsLeaflet = leaflet.decode( huge );
@@ -29,14 +30,14 @@ suite( 'compare to Leaflet implementation', function() {
     }
   });
 
-  test( 'decode gp, encode leaflet', function() {
+  it( 'decode gp, encode leaflet', function() {
       let points = polyline.decode( huge );
 
       points = points.map(reverse);
       assert.equal(huge, leaflet.encode(points));
   });
 
-  test( 'decode leaflet, encode gp', function() {
+  it( 'decode leaflet, encode gp', function() {
       let points = leaflet.decode( huge );
 
       points = points.map(reverse);

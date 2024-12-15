@@ -7,13 +7,14 @@ lint: | node_modules
 	$(NODE_BIN)/jshint index.js lib test benchmark
 
 test: | node_modules
-	$(NODE_BIN)/mocha --ui tdd test
+	node --test
 
 benchmark: | node_modules
 	$(NODE_BIN)/matcha --reporter plain
 
 node_modules: package.json
-	npm install && touch $@
+	yarn install
+	touch $@
 
 clean:
 	rm -fr build

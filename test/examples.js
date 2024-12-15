@@ -1,9 +1,10 @@
+const { describe, it } = require( 'node:test' );
 const { encode, decode } = require( '..' );
 const assert = require( 'assert' );
 
-suite( 'Google Polyline Example', function() {
+describe( 'Google Polyline Example', function() {
 
-  test( 'encode', function() {
+  it( 'encode', function() {
 
     let points = [
       [ -120.2, 38.5 ],
@@ -17,7 +18,7 @@ suite( 'Google Polyline Example', function() {
 
   });
 
-  test( 'encode', function() {
+  it( 'encode', function() {
 
     let points = [
       [ -120.2, 38.5 ],
@@ -31,7 +32,7 @@ suite( 'Google Polyline Example', function() {
 
   });
 
-  test( 'encode with map function', function() {
+  it( 'encode with map function', function() {
 
     let points = [
       { lon: -120.2, lat: 38.5 },
@@ -45,7 +46,7 @@ suite( 'Google Polyline Example', function() {
 
   });
 
-  test( 'decode', function() {
+  it( 'decode', function() {
 
     let points = decode( '_p~iF~ps|U_ulLnnqC_mqNvxq`@' );
     let decoded = [
@@ -58,7 +59,7 @@ suite( 'Google Polyline Example', function() {
 
   });
 
-  test( 'decode with start specified', function() {
+  it( 'decode with start specified', function() {
 
     let points = decode( '$$$_p~iF~ps|U_ulLnnqC_mqNvxq`@', { start: 3 } );
     let decoded = [
@@ -71,7 +72,7 @@ suite( 'Google Polyline Example', function() {
 
   });
 
-  test( 'decode with end specified', function() {
+  it( 'decode with end specified', function() {
 
     let poly = '_p~iF~ps|U_ulLnnqC_mqNvxq`@$$$';
     let points = decode( poly, { end: poly.length - 3 } );
@@ -85,7 +86,7 @@ suite( 'Google Polyline Example', function() {
 
   });
 
-  test( 'decode with map function', function() {
+  it( 'decode with map function', function() {
 
     let points = decode( '_p~iF~ps|U_ulLnnqC_mqNvxq`@', { mapFn: ([ lon, lat ]) => ({ lon, lat }) });
     let decoded = [
@@ -98,7 +99,7 @@ suite( 'Google Polyline Example', function() {
 
   });
 
-  test( 'almost zero', function () {
+  it( 'almost zero', function () {
 
     assert.equal(encode([[1, 1], [1.000001, 0.999999]]), '_ibE_ibE??');
 

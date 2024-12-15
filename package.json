@@ -14,13 +14,12 @@
   "dependencies": {},
   "devDependencies": {
     "@pirxpilot/matcha": "~1",
-    "jshint": "~2",
-    "mocha": "~4",
-    "polyline-encoded": "^0.0.8"
+    "@pirxpilot/jshint": "~3",
+    "polyline-encoded": "^0.0.9"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/pirxpilot/google-polyline.git"
+    "url": "git+https://github.com/pirxpilot/google-polyline.git"
   },
   "scripts": {
     "test": "make check"
