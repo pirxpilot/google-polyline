@@ -1,4 +1,10 @@
 
+3.0.2 / 2024-12-14
+==================
+
+ * switch from Travis CI to google actions
+ * replace mocha with built-in node:test
+
 3.0.1 / 2019-08-16
 ==================
 
