@@ -1,17 +1,18 @@
+const { describe, it } = require( 'node:test' );
 const { encode, decode } = require( '..' );
 const assert = require( 'assert' );
 
-suite( 'Samples', function() {
+describe( 'Samples', function() {
 
-  suite( '01', function() {
+  describe( '01', function() {
 
     const data = require( './data/example-01' );
 
-    test( 'encode', function() {
+    it( 'encode', function() {
       assert.strictEqual( encode( data.points ), data.polyline );
     });
 
-    test( 'decode', function() {
+    it( 'decode', function() {
       assert.deepEqual( decode( data.polyline ), data.points );
     });
 

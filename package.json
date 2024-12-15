@@ -14,8 +14,7 @@
   "dependencies": {},
   "devDependencies": {
     "@pirxpilot/matcha": "~1",
-    "jshint": "~2",
-    "mocha": "~4",
+    "@pirxpilot/jshint": "~3",
     "polyline-encoded": "^0.0.8"
   },
   "repository": {
