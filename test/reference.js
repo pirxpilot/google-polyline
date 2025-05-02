@@ -1,12 +1,11 @@
-const { describe, it } = require('node:test');
-const fs = require('node:fs');
-const leaflet = require('polyline-encoded');
-const assert = require('node:assert');
-
-const polyline = require('..');
+import assert from 'node:assert';
+import fs from 'node:fs';
+import { describe, it } from 'node:test';
+import leaflet from 'polyline-encoded';
+import polyline from '../index.js';
 
 function readPolyline(filename) {
-  const path = [__dirname, '../test/data', filename].join('/');
+  const path = [import.meta.dirname, '../test/data', filename].join('/');
   return fs.readFileSync(path, 'utf8');
 }
 

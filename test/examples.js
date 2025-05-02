@@ -1,6 +1,6 @@
-const { describe, it } = require('node:test');
-const { encode, decode } = require('..');
-const assert = require('node:assert');
+import assert from 'node:assert';
+import { describe, it } from 'node:test';
+import { decode, encode } from '../index.js';
 
 describe('Google Polyline Example', function () {
   it('encode', function () {
