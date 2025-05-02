@@ -2,7 +2,16 @@
   "name": "@pirxpilot/google-polyline",
   "version": "3.0.2",
   "description": "Encode / decode Google's polyline format",
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./encode": "./lib/encode.js",
+    "./decode": "./lib/decode.js"
+  },
   "author": "Jonas Hermsmeier <jhermsmeier@gmail.com> (https://jhermsmeier.de)",
+  "contributors": [
+    "Damian Krzeminski <pirxpilot@fuukot.com> (https://pirxpilot.me)"
+  ],
   "license": "MIT",
   "keywords": [
     "google",
@@ -13,8 +22,8 @@
   ],
   "dependencies": {},
   "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
     "@pirxpilot/matcha": "~1",
-    "@pirxpilot/jshint": "~3",
     "polyline-encoded": "^0.0.9"
   },
   "repository": {

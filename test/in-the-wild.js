@@ -1,21 +1,16 @@
-const { describe, it } = require( 'node:test' );
-const { encode, decode } = require( '..' );
-const assert = require( 'assert' );
+import assert from 'node:assert';
+import { describe, it } from 'node:test';
+import { decode, encode } from '../index.js';
+import data from './data/example-01.json' with { type: 'json' };
 
-describe( 'Samples', function() {
-
-  describe( '01', function() {
-
-    const data = require( './data/example-01' );
-
-    it( 'encode', function() {
-      assert.strictEqual( encode( data.points ), data.polyline );
+describe('Samples', function () {
+  describe('01', function () {
+    it('encode', function () {
+      assert.strictEqual(encode(data.points), data.polyline);
     });
 
-    it( 'decode', function() {
-      assert.deepEqual( decode( data.polyline ), data.points );
+    it('decode', function () {
+      assert.deepEqual(decode(data.polyline), data.points);
     });
-
   });
-
 });
