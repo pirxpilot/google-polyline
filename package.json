@@ -13,8 +13,8 @@
   ],
   "dependencies": {},
   "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
     "@pirxpilot/matcha": "~1",
-    "@pirxpilot/jshint": "~3",
     "polyline-encoded": "^0.0.9"
   },
   "repository": {

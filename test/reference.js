@@ -1,12 +1,12 @@
-const { describe, it } = require( 'node:test' );
-const fs = require('fs');
+const { describe, it } = require('node:test');
+const fs = require('node:fs');
 const leaflet = require('polyline-encoded');
-const assert = require( 'assert' );
+const assert = require('node:assert');
 
-const polyline = require( '..' );
+const polyline = require('..');
 
 function readPolyline(filename) {
-  let path = [__dirname, '../test/data', filename].join('/');
+  const path = [__dirname, '../test/data', filename].join('/');
   return fs.readFileSync(path, 'utf8');
 }
 
@@ -16,32 +16,29 @@ function reverse(c) {
 
 const huge = readPolyline('usa.txt');
 
-describe( 'compare to Leaflet implementation', function() {
+describe('compare to Leaflet implementation', function () {
+  it('decode', function () {
+    const points = polyline.decode(huge);
+    const pointsLeaflet = leaflet.decode(huge);
 
-  it( 'decode', function() {
-
-    let points = polyline.decode( huge );
-    let pointsLeaflet = leaflet.decode( huge );
-
-    assert.equal( points.length, pointsLeaflet.length );
-    for (let i = 0; i < points.length; i ++) {
+    assert.equal(points.length, pointsLeaflet.length);
+    for (let i = 0; i < points.length; i++) {
       assert.equal(points[i][0], pointsLeaflet[i][1], 'longitude should be the same ' + i);
       assert.equal(points[i][1], pointsLeaflet[i][0], 'latitutude should be the same ' + i);
     }
   });
 
-  it( 'decode gp, encode leaflet', function() {
-      let points = polyline.decode( huge );
+  it('decode gp, encode leaflet', function () {
+    let points = polyline.decode(huge);
 
-      points = points.map(reverse);
-      assert.equal(huge, leaflet.encode(points));
+    points = points.map(reverse);
+    assert.equal(huge, leaflet.encode(points));
   });
 
-  it( 'decode leaflet, encode gp', function() {
-      let points = leaflet.decode( huge );
+  it('decode leaflet, encode gp', function () {
+    let points = leaflet.decode(huge);
 
-      points = points.map(reverse);
-      assert.equal(huge, polyline.encode(points));
+    points = points.map(reverse);
+    assert.equal(huge, polyline.encode(points));
   });
-
 });
