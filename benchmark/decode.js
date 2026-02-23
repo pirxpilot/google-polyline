@@ -12,30 +12,18 @@ const huge = readPolyline('usa.txt');
 
 /* global suite, bench */
 
-suite('decode', function () {
-  bench('3 points', function () {
-    return polyline.decode('_p~iF~ps|U_ulLnnqC_mqNvxq`@');
-  });
+suite('decode', () => {
+  bench('3 points', () => polyline.decode('_p~iF~ps|U_ulLnnqC_mqNvxq`@'));
 
-  bench('~350 points', function () {
-    return polyline.decode(example.polyline);
-  });
+  bench('~350 points', () => polyline.decode(example.polyline));
 
-  bench('~35000 points', function () {
-    return polyline.decode(huge);
-  });
+  bench('~35000 points', () => polyline.decode(huge));
 });
 
-suite('leaflet decode', function () {
-  bench('3 points', function () {
-    return leaflet.decode('_p~iF~ps|U_ulLnnqC_mqNvxq`@');
-  });
+suite('leaflet decode', () => {
+  bench('3 points', () => leaflet.decode('_p~iF~ps|U_ulLnnqC_mqNvxq`@'));
 
-  bench('~350 points', function () {
-    return leaflet.decode(example.polyline);
-  });
+  bench('~350 points', () => leaflet.decode(example.polyline));
 
-  bench('~35000 points', function () {
-    return leaflet.decode(huge);
-  });
+  bench('~35000 points', () => leaflet.decode(huge));
 });
