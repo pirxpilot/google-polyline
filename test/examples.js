@@ -2,8 +2,8 @@ import assert from 'node:assert';
 import { describe, it } from 'node:test';
 import { decode, encode } from '../index.js';
 
-describe('Google Polyline Example', function () {
-  it('encode', function () {
+describe('Google Polyline Example', () => {
+  it('encode', () => {
     const points = [
       [-120.2, 38.5],
       [-120.95, 40.7],
@@ -15,7 +15,7 @@ describe('Google Polyline Example', function () {
     assert.equal(encoded, '_p~iF~ps|U_ulLnnqC_mqNvxq`@');
   });
 
-  it('encode', function () {
+  it('encode', () => {
     const points = [
       [-120.2, 38.5],
       [-120.95, 40.7],
@@ -27,7 +27,7 @@ describe('Google Polyline Example', function () {
     assert.equal(encoded, '$$$_p~iF~ps|U_ulLnnqC_mqNvxq`@');
   });
 
-  it('encode with map function', function () {
+  it('encode with map function', () => {
     const points = [
       { lon: -120.2, lat: 38.5 },
       { lon: -120.95, lat: 40.7 },
@@ -39,7 +39,7 @@ describe('Google Polyline Example', function () {
     assert.equal(encoded, '_p~iF~ps|U_ulLnnqC_mqNvxq`@');
   });
 
-  it('decode', function () {
+  it('decode', () => {
     const points = decode('_p~iF~ps|U_ulLnnqC_mqNvxq`@');
     const decoded = [
       [-120.2, 38.5],
@@ -50,7 +50,7 @@ describe('Google Polyline Example', function () {
     assert.deepEqual(points, decoded);
   });
 
-  it('decode with start specified', function () {
+  it('decode with start specified', () => {
     const points = decode('$$$_p~iF~ps|U_ulLnnqC_mqNvxq`@', { start: 3 });
     const decoded = [
       [-120.2, 38.5],
@@ -61,7 +61,7 @@ describe('Google Polyline Example', function () {
     assert.deepEqual(points, decoded);
   });
 
-  it('decode with end specified', function () {
+  it('decode with end specified', () => {
     const poly = '_p~iF~ps|U_ulLnnqC_mqNvxq`@$$$';
     const points = decode(poly, { end: poly.length - 3 });
     const decoded = [
@@ -73,7 +73,7 @@ describe('Google Polyline Example', function () {
     assert.deepEqual(points, decoded);
   });
 
-  it('decode with map function', function () {
+  it('decode with map function', () => {
     const points = decode('_p~iF~ps|U_ulLnnqC_mqNvxq`@', { mapFn: ([lon, lat]) => ({ lon, lat }) });
     const decoded = [
       { lon: -120.2, lat: 38.5 },
@@ -84,7 +84,7 @@ describe('Google Polyline Example', function () {
     assert.deepEqual(points, decoded);
   });
 
-  it('almost zero', function () {
+  it('almost zero', () => {
     assert.equal(
       encode([
         [1, 1],

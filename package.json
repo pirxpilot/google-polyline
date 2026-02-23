@@ -20,9 +20,8 @@
     "encode",
     "decode"
   ],
-  "dependencies": {},
   "devDependencies": {
-    "@biomejs/biome": "^1.9.4",
+    "@biomejs/biome": "2.4.4",
     "@pirxpilot/matcha": "~1",
     "polyline-encoded": "^0.0.9"
   },
