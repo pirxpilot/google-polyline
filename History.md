@@ -1,4 +1,11 @@
 
+4.0.1 / 2026-02-23
+==================
+
+ * update github actions
+ * upgrade `biome` to 2.4.4
+ * fix typo in email address
+
 4.0.0 / 2025-05-02
 ==================
 

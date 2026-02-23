@@ -1,6 +1,6 @@
 {
   "name": "@pirxpilot/google-polyline",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "Encode / decode Google's polyline format",
   "type": "module",
   "exports": {
